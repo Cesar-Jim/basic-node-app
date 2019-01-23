@@ -1,0 +1,32 @@
+Question 1: What is a Node module?
+
+A.
+
+Modules are building blocks or sets of functionality that are included in a given application. Every file in a node application 
+is considered a module. The variables and functions within the modules are scoped to that file; they are private. If we want to use a private
+variable or function, we need to explicitly make it public. 
+
+*****
+
+Question 2: What is the main difference between exports and module.exports?
+
+A.
+
+The exports object is just a reference to module.exports. module.exports is an empty object by default. As it is an empty object, we can add methods
+and variables to it directly.
+
+In other words: module.exports is the object that is actually returned as the result of a require call. Modules use exports to make things available. 
+The exports variable is initially set to that same object.
+
+*****
+
+Question 3: Why is using exports recommended?
+
+A.
+
+Because module.exports can be reassigned to anything outside of the module, which could lead to bugs and issues. In contrast, any reassignment of 
+exports will not be available outside of the module.
+
+*****
+
+Submitted by Cesar Jimenez
